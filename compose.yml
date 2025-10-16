@@ -1,10 +1,10 @@
 services:
-  php: 
-    image: php:8.2.10-apache
+  php:
+    build: .
     volumes:
-    - ./:/var/www/html
-    expose:
-    - 80
+      - ./:/var/www/html
     ports:
-    - 8082:80
+      - 8081:80
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     command: [ "bash", "-lc", "a2enmod rewrite && apache2-foreground" ]

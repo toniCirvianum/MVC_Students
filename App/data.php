@@ -8,7 +8,7 @@ $users = [
         'admin'=>true
     ],
     [
-        'id'=>0,
+        'id'=>1,
         'username'=>'raquel',
         'password'=>'123',
         'mail'=>'mail@mail.es',

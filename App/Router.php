@@ -65,7 +65,7 @@ class Router
     {
         $controller = $this->controller;
         $method = $this->method;
-        echo $method;
+
 
         $c = new $controller;
         if (isset($this->params)) {

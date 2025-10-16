@@ -10,6 +10,10 @@
 <header>
     <h1> Benvingut a la meva App MVC</h1>
     <hr>
+    <a href="/user">Login</a>
+    <a href="/user/register">Register</a>
+    <a href="/user/showUsers">Mostra usuaris</a>
+    <a href="/user/showUserById/1">Mostra usuaris amd id=1</a>
 </header>
 
 <main>
