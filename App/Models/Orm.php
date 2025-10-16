@@ -1,11 +1,15 @@
 <?php
 
-class Orm {
+namespace App\Models;
+
+class Orm
+{
 
     protected $model;
 
 
-    public function __construct () {
+    public function __construct($model)
+    {
 
     }
 
@@ -13,23 +17,15 @@ class Orm {
 
     }
 
-    public function removeItemById($id) {
+    public function removeItemById($id) {}
+
+    public function create($item) {}
+
+    public function getAll() {
 
     }
 
-    public function create($item) {
+    public function updateItemById($id) {}
 
-    }
-
-    public function getAll(){
-
-    }
-
-    public function updateItemById($id) {
-
-    }
-
-    public function reset() {
-        
-    }
+    public function reset() {}
 }

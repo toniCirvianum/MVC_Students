@@ -9,6 +9,7 @@
 
 <header>
     <h1> Benvingut a la meva App MVC</h1>
+    <hr>
 </header>
 
 <main>

@@ -38,20 +38,20 @@ class Router
 
         require_once($controllerPath);
 
+
         if (isset($url_array[2])) {
-            if (!empty($url_array[2])) {
-                $this->method = $url_array[2];
-            } else {
-                $this->method = 'index';
-            }
+            //si tenim una segon valor a la url inicialitzem metode
+            $this->method = !empty($url_array[2]) ? $url_array[2] : 'index';
+        } else {
+            $this->method = 'index';
         }
 
         // $this->method = !empty($url_array[2]) ? $url_array[2] : 'index';
 
         $numPramas = count($url_array);
-        if ($numPramas>3) {
-            for ($i=3; $i < $numPramas ; $i++) { 
-                $this->params [$i-3]= $url_array[$i];
+        if ($numPramas > 3) {
+            for ($i = 3; $i < $numPramas; $i++) {
+                $this->params[$i - 3] = $url_array[$i];
             }
         }
 
@@ -61,9 +61,11 @@ class Router
 
     }
 
-    public function run() {
+    public function run()
+    {
         $controller = $this->controller;
         $method = $this->method;
+        echo $method;
 
         $c = new $controller;
         if (isset($this->params)) {

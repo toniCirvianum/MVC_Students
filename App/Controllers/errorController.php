@@ -1,6 +1,7 @@
 <?php
 
-class errorController extends Controller {
+
+class errorController  {
 
     public function index() {
         //carrega la vista del error
